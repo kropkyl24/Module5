@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication Table</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <section id="page2">
+      <h1>Multiplication Table</h1>
+
+      <div id="blackboard"></div> <!-- This is the blackboard element where the results will be displayed -->
+      <script>
+        var table = prompt('Enter a number from 0-10:');
+        table = parseFloat(table);
+
+        var msg = '<h2>Multiplication Table</h2>';
+        var blackboard = document.getElementById('blackboard');
+
+        // Loop to calculate and append multiplication results to msg
+        for (var i = 1; i <= 10; i++) {
+          var result = table * i;
+          msg += '<p>' + table + ' x ' + i + ' = ' + result + '</p>';
+        }
+
+        // Displaying the result in the HTML page
+        blackboard.innerHTML = msg;
+      </script>
+      <section id="teacher2">
+        <img src="https://javascriptbook.com/code/c04/images/teacher.png" alt="Teacher 2">
+      </section>
+    </section>
+    <script src="js/example.js"></script>
+  </body>
+</html>
